@@ -7,16 +7,17 @@ public class ConnectJDBC {
     private String USERNAME ="root";
     private String PASSWORD ="root";
     private String CLASSFORNAME ="com.mysql.cj.jdbc.Driver";
+    private Connection connection;
 
     public ConnectJDBC() {
         try {
             Class.forName(CLASSFORNAME);
-            Connection connection= DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            connection= DriverManager.getConnection(URL,USERNAME,PASSWORD);
             System.out.println("Подключение успешно установлено!");
 
-            if(!connection.isClosed()){
-                connection.close();
-            }
+          //  if(!connection.isClosed()){
+          //      connection.close();
+         //   }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -24,4 +25,7 @@ public class ConnectJDBC {
         }
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
 }
