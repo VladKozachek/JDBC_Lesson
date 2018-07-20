@@ -15,14 +15,12 @@ public class ConnectJDBC {
             connection= DriverManager.getConnection(URL,USERNAME,PASSWORD);
             System.out.println("Подключение успешно установлено!");
 
-          //  if(!connection.isClosed()){
-          //      connection.close();
-         //   }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 
     public Connection getConnection() {
