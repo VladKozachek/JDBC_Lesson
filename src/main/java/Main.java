@@ -29,6 +29,7 @@ public class Main {
                 System.out.println(user);
             }*/
 
+
             // Выполнение запростов с помощью PreparedStatement
             PreparedStatement preparedInsert=connectionJDBC.getConnection().prepareStatement(queryInsert);
             preparedInsert.setString(1,"VLena");
