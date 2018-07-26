@@ -1,3 +1,5 @@
+package main.java;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,7 +8,7 @@ public class ConnectJDBC {
     private String URL ="jdbc:mysql://localhost:3306/mydbtest?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private String USERNAME ="root";
     private String PASSWORD ="root";
-    private String CLASSFORNAME ="com.mysql.cj.jdbc.Driver";
+    private String CLASSFORNAME ="com.mysql.cj.jdbc.Driver"; //можно найти в интернете, для SQL будет такая  ссылка
     private Connection connection;
 
     public ConnectJDBC() {
